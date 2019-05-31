@@ -1,0 +1,193 @@
+html, body, div, span, applet, object, iframe,
+p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@font-face {
+    font-family: oxygen-regular;
+    src: url(../SI-PHP/assets/fonts/Oxygen-Regular.woff);
+}
+
+@font-face {
+    font-family: oxygen-bold;
+    src: url(../assets/fonts/Oxygen-Bold.woff);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: oxygen-light;
+    src: url(../assets/fonts/Oxygen-Light.woff);
+    font-weight: lighter;
+}
+
+@include 
+
+
+
+header {
+    background-color: #1CB39B;
+    height: 7vh;
+    position: fixed;
+    width: 100vw;
+}
+
+.searchBar {
+    border: none;
+    width: 20vw;
+    height: 100%;
+    margin-left: 15vw;
+    background-color:#178776;
+    font-size: 16px;
+}
+
+input[type="search"] {
+    color:white;
+    text-indent: 10px;
+}
+
+.searchBar::placeholder {
+    color: white;
+    opacity: 0.76;
+    text-indent: 10px;
+    font-size: 16px;
+}
+
+.humansLogo {
+    width: 10vw;
+    height: 10vh;
+    margin-left: 16%;
+    margin-right: 16%;
+    margin-top: 3vh;
+    object-fit: contain;
+}
+
+.leftNav{
+    height: 100vh;
+    position: fixed;
+    width: 15vw;
+    left: 0px;
+    background-color: white;
+    z-index: 1;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.rightNav {
+    position: fixed;
+    width: 22vw;
+    height: 100vh;
+    background-color: white;
+    right: 0px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.navMenuLeft {
+    margin-top: 10vh;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.navMenuLeft li {
+    margin-left: 2vw;
+}
+
+.active {
+    font-family: oxygen-bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 19px;
+}
+
+.navMenuLeft a {
+    text-decoration: none;
+    color: black;
+    width: 10vw;
+    height: 18px;
+    margin-left: 1vw;
+    vertical-align: top;
+    font-family: oxygen-regular;
+    font-size: 15px;
+}
+
+.rightNavTop {
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+}
+
+.profilePicAndName {
+    height: 24vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.myProfilePic {
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    border-radius: 100%;
+    margin-top: 3vh;
+    margin-left: 3px;
+    
+}
+
+.myName {
+    font-family: oxygen-bold;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 19px;
+}
+
+
+
+.test {
+    height: 222vh;
+    background-color: white;
+}
+

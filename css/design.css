@@ -1,0 +1,82 @@
+h1 {
+    font-size: 20;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 30px;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bloc_inscription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    height: 45px;
+    width: 100%;
+    background-color: #1CB39B;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+form {
+    background-color: #E2EFEB;
+    width: 40vw;
+    height: 45vh;
+    padding: 40px 70px;
+}
+
+input[type=text], input[type=mail],input[type=password] {
+    outline: none;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-bottom: 2px solid #178776a1; 
+}
+
+input[type=text]::placeholder, input[type=mail]::placeholder,input[type=password]::placeholder {
+    color: #178776a1;
+}
+input[type=mail] {
+    width: 100%;
+}
+.form__group{
+    margin: 40px 0;
+}
+
+.form__input{
+    width: 100%;
+}
+
+.form__inputer{
+    width: 45%;
+}
+.form__group--primary{
+    display: flex;
+    justify-content: space-between;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+}
+
+.submit__button {
+    background-color: #178776;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 50px;
+    color: white;
+    font-size: 15;
+    cursor: pointer;
+    outline: none;
+}

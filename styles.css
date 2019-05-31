@@ -1,0 +1,688 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@font-face {
+    font-family: oxygen-regular;
+    src: url(assets/fonts/Oxygen-Regular.woff);
+}
+
+@font-face {
+    font-family: oxygen-bold;
+    src: url(assets/fonts/Oxygen-Bold.woff);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: oxygen-light;
+    src: url(assets/fonts/Oxygen-Light.woff);
+    font-weight: lighter;
+}
+
+
+
+header {
+    background-color: #1CB39B;
+    height: 7vh;
+    position: fixed;
+    width: 100vw;
+}
+
+.searchBar {
+    border: none;
+    width: 20vw;
+    height: 100%;
+    margin-left: 15vw;
+    background-color:#178776;
+    font-size: 16px;
+}
+
+input[type="search"] {
+    color:white;
+    text-indent: 10px;
+}
+
+.searchBar::placeholder {
+    color: white;
+    opacity: 0.76;
+    text-indent: 10px;
+    font-size: 16px;
+}
+
+.humansLogo {
+    width: 10vw;
+    height: 10vh;
+    margin-left: 16%;
+    margin-right: 16%;
+    margin-top: 3vh;
+    object-fit: contain;
+}
+
+.leftNav{
+    height: 100vh;
+    position: fixed;
+    width: 15vw;
+    left: 0px;
+    background-color: white;
+    z-index: 1;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.rightNav {
+    position: fixed;
+    width: 22vw;
+    height: 100vh;
+    background-color: white;
+    right: 0px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.navMenuLeft {
+    margin-top: 10vh;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.navMenuLeft li {
+    margin-left: 2vw;
+}
+
+.active {
+    font-family: oxygen-bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 19px;
+}
+
+.navMenuLeft a {
+    text-decoration: none;
+    color: black;
+    width: 10vw;
+    height: 18px;
+    margin-left: 1vw;
+    vertical-align: top;
+    font-family: oxygen-regular;
+    font-size: 15px;
+}
+
+.rightNavTop {
+    width: 100%;
+    height: 22vh;
+    display: flex;
+    justify-content: center;
+}
+
+.profilePicAndName {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.myProfilePic {
+    width: 80px;
+    height: 80px;
+    background: url(assets/images/Ellipse.svg) no-repeat;
+    margin-top: 3vh;
+    background-position: center;
+    align-self: center;
+    
+}
+
+.myName {
+    font-family: oxygen-bold;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 19px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.statsNumbers {
+    font-family: oxygen-bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 30px;
+    color: #1CB39B;
+}
+
+.statsLabels {
+    font-family: oxygen-regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 21px;
+    margin-top: 5px;
+    color: #858585;
+}
+
+.bestFriendsTitle {
+    font-family: oxygen-bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    color: #000000;
+    margin-left: 1vw;
+    margin-top: 4vh;
+}
+
+.bestFriendsContent {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 170px;
+    margin-left: 5px;
+}
+
+.bestFriendsPicture1 {
+    background: url(assets/images/Maxime\ Frisou.svg);
+    width: 30px;
+    height: 30px;
+}
+.bestFriendsPicture2 {
+    background: url(assets/images/Jane\ Meyer.svg);
+    width: 30px;
+    height: 30px;
+}
+.bestFriendsPicture3 {
+    background: url(assets/images/Maxime\ Frisou.svg);
+    width: 30px;
+    height: 30px;
+}
+
+.bestFriendsPictures {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 25vh;
+    margin-left: 1vw;
+    width: 40px;
+}
+
+.bestFriendsLabels {
+    display: flex;
+    width: 12vw;
+    height: 25vh;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.bestFriendsLabels a {
+    font-family: oxygen-regular;
+    font-weight: normal;
+    font-size: 16px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.recentProjectsTitle {
+    font-family: oxygen-bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    color: #000000;
+    margin-left: 1vw;
+}
+
+.recentProjectsContent {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 500px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.recentProjectsPicture1 {
+    background: url(assets/images/Mali.svg);
+    width: 30px;
+    height: 30px;
+}
+.recentProjectsPicture2 {
+    background: url(assets/images/Fiacre.svg);
+    width: 30px;
+    height: 30px;
+}
+.recentProjectsPicture3 {
+    background: url(assets/images/Les\ Valis.svg);
+    width: 30px;
+    height: 30px;
+}
+
+.recentProjectsPictures {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 25vh;
+    margin-left: 1vw;
+    width: 40px;
+}
+
+.recentProjectsLabels {
+    display: flex;
+    width: 12vw;
+    height: 25vh;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.recentProjectsLabels a {
+    font-family: oxygen-regular;
+    font-weight: normal;
+    font-size: 16px;
+    text-decoration: none;
+    color: #000000;
+}
+
+li a {
+    text-decoration: none;
+}
+
+.post {
+    height: 100%;
+    background-color:white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post_message {
+    width: 728px;
+    background-color: #FFFFFF;
+    margin-top: 15vh;
+    margin-right: 78px;
+    border-radius: 4px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.post_title {
+    width: 728px;
+    height: 31px;
+    background-color:#FBFCFA;
+}
+
+h1 {
+    font-size: 13px;
+    font-family: oxygen-regular;
+    font-style: normal;
+}
+
+.buttons_activites {
+    width: 57vw;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.photovideo {
+    background-color: #39B8FF;
+    width: 120px;
+    height: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.typophoto {
+    font-size: 13px;
+    font-family: oxygen-regular;
+    font-style: normal;
+    font-weight: normal;
+    color: white;
+    cursor: pointer;
+}
+
+.identification {
+    background-color: #39C847;
+    width: 120px;
+    height: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.identypo {
+    font-size: 13px;
+    font-family: oxygen-regular;
+    font-style: normal;
+    font-weight: normal;
+    color: white;
+}
+
+.localisation {
+    background-color: #E35959;
+    width: 120px;
+    height: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.locatypo {
+    font-size: 13px;
+    font-family: oxygen-regular;
+    font-style: normal;
+    font-weight: normal;
+    color: white;
+}
+
+.Publication {
+    background-color: #1CB39B;
+    width: 120px;
+    height: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.publitypo {
+    font-size: 13px;
+    font-family: oxygen-regular;
+    font-style: normal;
+    font-weight: normal;
+    color: white;
+}
+
+.test {
+    height: 222vh;
+    background-color: white;
+}
+
+.post {
+    width: 63vw;
+    height: 100%;
+    background-color:white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 0 21vh;
+}
+
+.post_message {
+    margin:  0 0 10vh 20vh;
+    width: 53vw;
+    background-color: #FFFFFF;
+    margin-top: 15vh;
+    border-radius: 4px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.post_title {
+    width: 728px;
+    height: 31px;
+    background-color:#FBFCFA;
+}
+
+h1 {
+    font-size: 13px;
+    font-family: oxygen-regular;
+    font-style: normal;
+}
+
+.buttons_activites {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-top:20px;
+}
+
+.photovideo {
+    background-color: #39B8FF;
+    width: 8vw;
+    height: 3vh;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.typophoto {
+    font-size: 13px;
+    font-family: oxygen-regular;
+    font-style: normal;
+    font-weight: normal;
+    color: white;
+}
+
+.identification {
+    background-color: #39C847;
+    width: 8vw;
+    height: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.identypo {
+    font-size: 13px;
+    font-family: oxygen-regular;
+    font-style: normal;
+    font-weight: normal;
+    color: white;
+}
+
+.localisation {
+    background-color: #E35959;
+    width: 8vw;
+    height: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.locatypo {
+    font-size: 13px;
+    font-family: oxygen-regular;
+    font-style: normal;
+    font-weight: normal;
+    color: white;
+}
+
+.Publication {
+    background-color: #1CB39B;
+    width: 8vw;
+    height: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.publitypo {
+    font-size: 13px;
+    font-family: oxygen-regular;
+    font-style: normal;
+    font-weight: normal;
+    color: white;
+}
+
+
+
+
+
+
+.actualite1 {
+    font-size: 13px;
+    font-family: oxygen-regular;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    margin-right: 34px;
+}
+
+.posts_likes {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.post_people {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.handicape {
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+}
+
+.input2 {
+    color: black;
+    border: none;
+    resize: none;
+    width: 90%;
+}
+
+.post_message2 {
+    width: 728px;
+    background-color: #FFFFFF;
+    margin-top: 15vh;
+    margin-right: 78px;
+    border-radius: 4px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+    border: 4px solid black;
+}
+
+.blocs {
+    display: flex;
+    flex-direction: row;
+    width: 450px;
+}
+
+.blocs_calendar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 45%;
+}
+
+.bloc_calendar1 {
+    display: flex;
+    height: 34vh;
+    width: 56vw;
+}
+
+.hello{
+    height: 45vh;
+    width: 40vh;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.balancoire {
+    object-fit: cover;
+    height: 20vh;
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.text_posts {
+    font-size: 13px;
+    font-family: oxygen-regular;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 18px;
+    margin-top: 14px;
+    margin-left: 4px;
+}
+
+.text_posts2 {
+    font-size: 13px;
+    font-family: oxygen-regular;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 18px;
+    margin-top: 14px;
+    margin-left: 4px;
+}
+
+.post_article1_photo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.article1_title {
+    font-size: 13px;
+    font-family: oxygen-regular;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 18px;
+    margin-top: 14px;
+    margin-left: 4px;
+}
+
+.posts_articles {
+    margin: 0 0 0 22vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 89vh;
+}
+
+
